@@ -106,6 +106,14 @@ examples:
       instance_name: 'my-instance'
       client_id: 'my-client-id'
       client_secret: 'my-client-secret'
+virtual_fields:
+  - name: 'deletion_policy'
+    description: |
+      The deletion policy for the instance. Setting FORCE allows the resource
+      to be deleted when there exists nested resources within the instance. Possible
+      values are: "ABANDON", "FORCE". Defaults to "FORCE".
+    type: String
+    default_value: "FORCE"
 parameters:
   - name: 'region'
     type: String
